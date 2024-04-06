@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Counter Project</title>
+    </head>
+    <body>
+        <h1>Counter</h1>
+        <div style="font-size: x-large; color: red" id="theCounter"></div>
+        <br>
+        <button onclick="increase()">Increase</button>
+        <button onclick="decrease()">Decrease</button>
+
+        <script>
+            // Don't let me define global variables more than once.
+            "use strict";
+
+            let count = 0
+            document.getElementById("theCounter").innerText = count
+
+            // Function to add to the counter.
+            function increase() {
+                count++;
+                document.getElementById("theCounter").innerText = count;
+            }
+
+            // Function to remove from the counter.
+            function decrease() {
+                count--;
+                document.getElementById("theCounter").innerText = count;
+            }
+        </script>
+    </body>
+</html>
